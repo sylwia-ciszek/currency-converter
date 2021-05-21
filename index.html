@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosty przelicznik walut</title>
+    <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/formCalc.css" rel="stylesheet">
+    <script defer src="js/form.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="header">KANTOR</h1>
+    <h2 class="formCalc" id="przelicznik-walut">
+        <form class="js-form formCalc__shell">
+            <fieldset class="formCalc__fieldset">
+                <legend class="formCalc__legend">
+                    Przelicznik walut</legend>
+
+                <p>Pola oznaczone * są wymagane.</p>
+
+                <label>PLN*:
+                    <input class="js-plnValue" type="number" required placeholder="Wpisz kwotę" min="0.01" step="any">
+                </label>
+                <p>
+                    <label class="js-currencyOption">Wybierz walutę: <select>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="USD">USD</option>
+                </p>
+                </select>
+                </label>
+
+                <p> <button class="formCalc__button">Przelicz</button>
+                    <input class="formCalc__button" type="reset" value="Wyczyść">
+                </p>
+                <p>Wynik : <strong class="js-result">0,00 zł</strong></p>
+            </fieldset>
+        </form>
+    </h2>
+</body>
+
+</html>
