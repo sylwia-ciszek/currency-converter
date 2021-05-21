@@ -1,7 +1,7 @@
 
 let formElement = document.querySelector(".js-form");
-let plnElement = document.querySelector(".js-plnValue");
-let currencyElement = document.querySelector(".js-currencyOption");
+let amountElement = document.querySelector(".js-amount");
+let currencyElement = document.querySelector(".js-currency");
 let resultElement = document.querySelector(".js-result");
 
 let rateEUR = 4.56;
@@ -11,7 +11,7 @@ let rateUSD = 3.81;
 formElement.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    let amount = +plnElement.value;
+    let amount = +amountElement.value;
     let currency = currencyElement.value;
 
     let result;
@@ -31,9 +31,7 @@ formElement.addEventListener("submit", (event) => {
 
     }
 
-    resultElement.innerText = `${amount.toFixed(2)} PLN = ${result.toFixed(2)} ${currency}`;
-
-
+    resultElement.innerText = `${amount} PLN = ${result} ${currency}`;
 
 });
 

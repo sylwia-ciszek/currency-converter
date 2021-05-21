@@ -20,7 +20,7 @@
 <body>
     <h1 class="formCalc__header">Prosty przelicznik walut - ćwiczenia z JavaScript
     </h1>
-    <h2 class="formCalc__body" id="przelicznik-walut">
+    <div class="formCalc__body">
         <form class="js-form formCalc__shell">
             <fieldset class="formCalc__fieldset">
                 <legend class="formCalc__legend">
@@ -29,13 +29,13 @@
                 <p>Pola oznaczone * są wymagane.</p>
 
                 <label>PLN*:
-                    <input class="js-plnValue" type="number" required placeholder="Wpisz kwotę" min="0.01" step="any">
+                    <input class="js-amount" type="number" required placeholder="Wpisz kwotę" min="0.01" step="any">
                 </label>
                 <p>
-                    <label class="js-currencyOption">Wybierz walutę: <select>
-                            <option value="EUR">EUR</option>
-                            <option value="GBP">GBP</option>
-                            <option value="USD">USD</option>
+                    <label class="js-currency">Wybierz walutę: <select>
+                            <option value="EUR">Euro</option>
+                            <option value="GBP">Funt Brytyjski</option>
+                            <option value="USD">Dolar Amerykański</option>
                 </p>
                 </select>
                 </label>
@@ -43,10 +43,11 @@
                 <p> <button class="formCalc__button">Przelicz</button>
                     <input class="formCalc__button" type="reset" value="Wyczyść">
                 </p>
-                <p>Wynik : <strong class="js-result">0,00 zł</strong></p>
+                <p>Wynik:</p>
+                <p class="js-result"><strong></strong></p>
             </fieldset>
         </form>
-    </h2>
+    </div>
 </body>
 
 </html>
