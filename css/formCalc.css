@@ -1,10 +1,8 @@
 .formCalc__body {
-    margin: auto;
+    margin: 0 auto;
     box-shadow: 0px 0px 10px -2px rgb(0, 0, 0);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    min-width: 600px;
-    width: 80%;
+    padding: 0 20px;
+    max-width: 700px;
     vertical-align: middle;
     color: rgb(0, 0, 0);
     border: 2px solid rgb(158, 152, 152);
@@ -18,7 +16,6 @@
     font-size: 30px;
     margin: 20px;
     text-align: center;
-
 }
 
 .formCalc__fieldset {
