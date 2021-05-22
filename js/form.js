@@ -31,7 +31,7 @@ formElement.addEventListener("submit", (event) => {
 
     }
 
-    resultElement.innerText = `${amount} PLN = ${result} ${currency}`;
+    resultElement.innerText = `${amount} PLN = ${result.toFixed(2)} ${currency}`;
 
 });
 
