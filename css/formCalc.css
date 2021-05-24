@@ -1,5 +1,5 @@
 .formCalc__body {
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(231, 231, 231, 25%);
     background-position: center;
     margin: auto;
     box-shadow: 0px 0px 10px -2px rgb(0, 0, 0);
@@ -15,11 +15,11 @@
 }
 
 .formCalc__header {
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(231, 231, 231, 25%);
     margin: 20px auto;
     box-shadow: 0px 0px 10px -2px rgb(0, 0, 0);
     border-radius: 15px;
-    padding: 0 20px;
+    padding: 20px;
     max-width: 700px;
     vertical-align: middle;
     color: rgb(255, 159, 32);
