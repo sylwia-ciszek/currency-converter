@@ -1,37 +1,49 @@
+{
+    const calculationResult = (amount, currency) => {
+        const rateEUR = 4.56;
+        const rateGBP = 5.31;
+        const rateUSD = 3.81;
 
-let formElement = document.querySelector(".js-form");
-let amountElement = document.querySelector(".js-amount");
-let currencyElement = document.querySelector(".js-currency");
-let resultElement = document.querySelector(".js-result");
+        switch (currency) {
+            case "EUR":
+                return amount / rateEUR;
 
-let rateEUR = 4.56;
-let rateGBP = 5.31;
-let rateUSD = 3.81;
+            case "GBP":
+                return amount / rateGBP;
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
+            case "USD":
+                return amount / rateUSD;
+        }
+    };
 
-    let amount = +amountElement.value;
-    let currency = currencyElement.value;
+    const updateResultText = (amount, result, currency) => {
+        const resultElement = document.querySelector(".js-result");
+        resultElement.innerText = `${amount} PLN = ${result.toFixed(2)} ${currency}`;
+    };
 
-    let result;
+    const onFormSubmit = (event) => {
+        event.preventDefault();
 
-    switch (currency) {
-        case "EUR":
-            result = amount / rateEUR;
-            break;
+        const amountElement = document.querySelector(".js-amount");
+        const currencyElement = document.querySelector(".js-currency");
+        
 
-        case "GBP":
-            result = amount / rateGBP;
-            break;
+        const amount = +amountElement.value;
+        const currency = currencyElement.value;
 
-        case "USD":
-            result = amount / rateUSD;
-            break;
+        let result = calculationResult(amount, currency);
 
-    }
+        updateResultText(amount, result, currency);
 
-    resultElement.innerText = `${amount} PLN = ${result.toFixed(2)} ${currency}`;
+    };
 
-});
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
 
+        formElement.addEventListener("submit", onFormSubmit);
+        
+    };
+    
+    init();
+
+}
